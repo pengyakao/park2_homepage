@@ -1,0 +1,865 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+#home_headerbg{
+    height: 56px;
+    width: 100vw;
+    background-color: #EAEAEA;
+}
+
+/* 首頁活動輪播 */
+#home_sliderArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto; */
+    width: 100vw;
+    /* height: 500px; */
+    background-color: rgb(0, 0, 0);
+}
+
+.home_buttom {
+    width: 100vw;
+}
+
+/* 標題 */
+.home_title {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: 700;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+.home_title2 {
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight: 700;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    text-shadow: 2px 2px 0px #ffffff;
+}
+.home_titleBlock{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+.home_titleBlock .home_customTitle{
+    position: absolute;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #000;
+    -webkit-text-stroke: 5px #000;
+    letter-spacing: 2px;
+    top: 0;
+    left: 0;
+    transform: translate(-2px, -2px);
+  }
+
+.home_titleBlock .home_titleBg{
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #000;
+    -webkit-text-stroke: 5px #000;
+    letter-spacing: 2px;
+}
+.home_titleBlock2{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+.home_titleBlock2 .home_customTitle2{
+    position: absolute;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 5px rgb(255, 255, 255);
+    letter-spacing: 2px;
+    top: 0;
+    left: 0;
+    transform: translate(-2px, -2px);
+  }
+
+.home_titleBlock2 .home_titleBg2{
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 5px rgb(255, 255, 255);
+    letter-spacing: 2px;
+}
+#home_title1::before{
+    content: '關於Park2';
+    font-size: 28px;
+    position: absolute;
+    -webkit-text-stroke: 1px #000;
+    color: #fff;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+#home_title2::before{
+    content: '官方公告';
+    font-size: 28px;
+    position: absolute;
+    -webkit-text-stroke: 1px #000;
+    color: #fff;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+#home_title3::before{
+    content: 'FAQ';
+    font-size: 28px;
+    position: absolute;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    z-index: 2;
+}
+#home_title4::before{
+    content: '即時天氣';
+    font-size: 28px;
+    position: absolute;
+    -webkit-text-stroke: 1px #000;
+    color: #fff;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+#home_title5::before{
+    content: '交通資訊';
+    font-size: 28px;
+    position: absolute;
+    -webkit-text-stroke: 1px #000;
+    color: #fff;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+/* 關於park2 */
+#home_aboutArea {
+    background-color: #ABFF1D;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#home_aboutArea p {
+    width: 80vw;
+}
+
+#home_aboutContent {
+    /* padding: 10px; */
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#home_aboutArea img {
+    padding-top: 15px;
+    width: 70px;
+}
+
+/* 官方公告 */
+#home_newsArea {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#home_news {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+
+#home_newsImg {
+    width: 400px;
+    height: 285px;
+    /* width: 50%; */
+    /* border: 1px solid #000000; */
+}
+
+#home_newsImg img {
+    box-sizing: border-box;
+    width: 95%;
+    height: 95%;
+    object-fit:cover;
+    border: 5px solid white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#home_newsContent {
+    width: calc(100% - 400px);;
+    /* background-color: rgb(255, 0, 0); */
+}
+
+#home_newsContent span {
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 5px;
+    margin-bottom: -15px;
+}
+
+#home_newsContent p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#home_newsContent img {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+}
+
+#home_newsContent div:nth-child(odd) {
+    border-bottom: 1.5px solid #000000;
+    display: flex;
+    justify-content: space-between;
+}
+#home_newsContent .home_newsDateTitle,
+#home_newsContent .home_newsDate {
+    color: gray;
+    font-size: 10px;
+}
+
+@media (max-width: 750px) {
+    #home_news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #home_newsImg {
+        width: 100%;
+    }
+    #home_newsContent {
+        width: 100%;
+    }
+}
+
+
+
+/* FAQ */
+#home_FAQArea {
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#home_FAQ{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+/* #home_FAQ_L{
+    width: 20%;
+} */
+#home_FAQ_R{
+    /* width: 20%;  */
+    height:250px ;
+    margin-bottom: 50px;
+}
+@media (max-width: 600px) {
+    #home_FAQ_R{
+        display: none;
+    }
+    #home_FAQ{
+    justify-content:center;
+    }
+
+}
+#home_FAQContent {
+    width: 70%;
+    padding-left: 15%;
+    /* border: 2px solid #ABFF1D; */
+}
+
+#home_FAQContent img {
+    width: 25px;
+    height: 25px;
+    /* border: 1px solid #ABFF1D; */
+}
+
+#home_FAQContent div:nth-child(odd) {
+    border-bottom: 1.5px solid #ABFF1D;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home_FAQContent span {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    /* border: 1px solid #ABFF1D; */
+}
+
+#home_FAQContent p {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+/* 即時天氣 */
+#home_weatherArea {
+    width: 100%;
+    background-image: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#home_weather {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#home_weatherNow {
+    width: 20%;
+    /* border: 1px solid #000000; */
+}
+
+#home_weather72 {
+    width: 80%;
+    /* border: 1px solid #000000; */
+}
+
+#home_weatherNow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#home_weatherLoc {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    -webkit-text-stroke: 0.5px #ffffff;
+}
+
+#home_weatherNowTem {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#home_weatherNowIcon img {
+    /* font-size: 50px; */
+    /* text-align: center; */
+    width: 60%;
+}
+
+#home_weatherNowRain {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#home_weatherDate {
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#home_weatherDate span {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.displaydate {
+    border-bottom: 2.5px solid #333333;
+}
+
+#home_weatherDrop {
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    user-select:none;
+}
+
+/* 隱藏滾動條 */
+/* #home_weatherDrop::-webkit-scrollbar{
+    width:0px ;
+} */
+.home_weatherDrop {
+    padding: 10px;
+    /* border: 1px solid; */
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home_weatherTime {
+    width: 10vw;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.home_weatherTem {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.home_weatherIcon img {
+    width: 60%;
+}
+
+.home_weatherRain {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+/* 交通資訊 */
+#home_transArea {
+    width: 100%;
+    background-color: #ABFF1D;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#home_trans {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+#home_transMap {
+    width: 400px;
+    /* border: 1px solid #000000; */
+}
+
+#home_transInfo {
+    /* width: 50%; */
+    flex-grow: 1;
+    margin-bottom: 20px;
+    background-color: #000000;
+    /* border: 1px solid #ff0000; */
+}
+
+#home_transInfoPub {
+    padding: 20px;
+}
+
+#home_transInfoCar {
+    padding: 20px;
+}
+
+.home_transTitle {
+    width: 100px;
+    height: 28px;
+    background-color: #ABFF1D;
+    font-size: 15px;
+    font-weight: 500;
+    transform: skew(-20deg);
+}
+
+.home_transTitle p {
+    color: #000000;
+    transform: skew(20deg);
+}
+
+#home_transInfoPub span,
+#home_transInfoCar span {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.home_transCont {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+#home_transInfoPub img,
+#home_transInfoCar img {
+    width: 20px;
+}
+
+#home_transInfoPub div:nth-child(even),
+#home_transInfoCar div:nth-child(even) {
+    border-bottom: 1.5px solid #ABFF1D;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 交通資訊跑馬燈 */
+/* .home_marquee {
+    height: 30px;
+    width: 80%;
+    border-radius: 3px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.home_marquee div {
+    display: block;
+    width: 200%;
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 40s linear infinite;
+}
+
+.home_marquee span {
+    float: left;
+    width: 100%;
+    padding: 3px;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -200%;
+    }
+} */
+
+
+/* 地圖 */
+#home_transMap {
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content: flex-start;
+    /* background-color: #ABFF1D; */
+}
+
+#home_transMapT {
+    width: 350px;
+    height: 30px;
+    background-color: black;
+    transform: skew(-30deg);
+}
+
+#home_transMap1 {
+    width: 350px;
+    height: 300px;
+    background-color: #F1FFD2;
+    box-sizing: border-box;
+    border: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home_transMap2 {
+    width: 300px;
+    height: 250px;
+    box-sizing: border-box;
+    border: 4px solid black;
+    background-color: #EAEAEA;
+    position: relative;
+}
+
+#home_transGoogle {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#home_transMapArrow {
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    height: 30px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 4px 4px 0px 0px;
+    background-color: #000000;
+    /* background-color: #ABFF1D; */
+    overflow: hidden;
+}
+
+#home_transMapArrow img {
+    height: 100%;
+    float: right;
+}
+
+#home_transMapR {
+    margin-top: -15px;
+    width: 17px;
+    height: 300px;
+    background-color: black;
+    transform: skew(0, -60deg);
+}
+
+@media (max-width: 991px) {
+    #home_trans {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #home_transMap {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto 0;
+        justify-content:center;
+        align-content: center;
+        flex-direction: column;
+    }
+    #home_transMapT {
+        margin-left: 9px;
+    }
+    #home_transMapR {
+        margin-top: 0px;
+        margin-left: -9px;
+    }
+
+    #home_transMap1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #home_transInfo {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
+/* ALL展開收合 */
+.flip {
+    /* margin: 0px; */
+    /* padding: 0px; */
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #ff0000; */
+    display: none;
+}
+
+.flip1 {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel1 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip2 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel2 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip3 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel3 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip4 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel4 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip5 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel5 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip6 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel6 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip7 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel7 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip8 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel8 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip9 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel9 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+.flip10 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #E09697; */
+    cursor: pointer;
+}
+
+.panel10 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+
+
+
+
+

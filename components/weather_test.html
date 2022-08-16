@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h4>台中天氣JSON</h4>
+    <p><a href="https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-093?Authorization=CWB-5707E42F-6830-4209-A2D4-4096A68E9514&format=JSON&locationId=F-D0047-073&elementName=PoP6h,UVI,T,RH,Wx,WeatherDescriptionAuthorization=CWB-5707E42F-6830-4209-A2D4-4096A68E9514">JSON link</a></p>
+    <button id="btnGetOpenData">取得展覽資料</button>
+    <hr>
+    <div id="divResult"></div>
+</body>
+
+
+<script>
+    // btnGetOpenData.addEventListener('click', getFile)
+    getFile()
+    function getFile() {
+            var xhr = new XMLHttpRequest;
+            var url = "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-093?Authorization=CWB-5707E42F-6830-4209-A2D4-4096A68E9514&format=JSON&locationId=F-D0047-073&elementName=PoP6h,UVI,T,RH,Wx,WeatherDescriptionAuthorization=CWB-5707E42F-6830-4209-A2D4-4096A68E9514"
+            xhr.open("GET",url);
+            xhr.send();
+            // console.log(xhr);
+
+            xhr.addEventListener('load',function(){
+                var data = JSON.parse(xhr.responseText);
+                console.log(data.records.locations[0].location[18].weatherElement);
+                var data_Wx=data.records.locations[0].location[18].weatherElement[0];
+                var data_T=data.records.locations[0].location[18].weatherElement[1];
+                var data_RH=data.records.locations[0].location[18].weatherElement[2];
+                var data_PoP6h=data.records.locations[0].location[18].weatherElement[3];
+                console.log(data_T.time);
+                // console.log(data_T.time[0].elementValue[0].value);
+
+                var infromation = "";
+                data_T.time.forEach(element => {
+                    // console.log(element);
+                    // console.log(element.dataTime);
+                    // console.log(element.elementValue[0].value);
+                    infromation += `時間：${element.dataTime}<br>`;
+                    infromation += `Temp：${element.elementValue[0].value}<br>`;
+
+                    infromation += `<br>`;
+                });
+
+                infromation += `================WX=====================<br>`;
+                data_Wx.time.forEach(element =>{
+                    // console.log(element);
+                    // console.log(element.elementValue[0].value);
+                    // console.log(element.elementValue[1].value);
+                    infromation += `時間：${element.startTime}<br>`;
+                    infromation += `Wx天氣：${element.elementValue[0].value} | ${element.elementValue[1].value}<br>`;
+                    infromation += `<br>`;
+                    
+                })
+
+                infromation += `================PoP6H=====================<br>`;
+                data_PoP6h.time.forEach(element =>{
+                    console.log(element);
+                    // console.log(element.elementValue[0].value);
+                    // console.log(element.elementValue[1].value);
+                    infromation += `時間：${element.startTime}<br>`;
+                    infromation += `PoP6H降雨：${element.elementValue[0].value}%<br>`;
+                    })
+
+                divResult.innerHTML = infromation;
+            })
+    }
+
+</script>
+</html>

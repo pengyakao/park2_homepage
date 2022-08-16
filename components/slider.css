@@ -1,0 +1,185 @@
+/* 輪播slider / carousel  _v3*/
+html, body{
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-component {
+  position: relative;
+  height: calc(100vh - 126px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+  overflow: hidden;
+}
+.banner-component .slider-outer {
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+}
+.banner-component .slider-outer .slider-container {
+  height: 100%;
+  white-space: nowrap;
+  display: inline-block;
+}
+.banner-component .slider-outer .slider-container .slider-item {
+  display: inline-flex;
+  background-color: #000;
+  box-sizing: border-box;
+  /* border: solid 3px #fff; */
+  height: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.banner-component .slider-outer .slider-container .slider-item .box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 900;
+  overflow: hidden;
+  position: relative;
+}
+.banner-component .slider-outer .slider-container .slider-item .box img{
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+.banner-component .info-card {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 130px;
+  right: 130px;
+  transition-duration: .5s;
+  transform: rotate(-5deg);
+  padding: 35px;
+}
+.banner-component .info-card .bg{
+  position: absolute;
+  height: 160%;
+  z-index: 9;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-component .info-card .bg img{
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-component .info-card .info {
+  position: relative;
+  text-align: center;
+  z-index: 100;
+  color: #fff;
+}
+.banner-component .info-card .info .name{
+  font-size: 28px;
+  font-weight: 700;
+  color: #ABFF1D;
+}
+.banner-component .info-card .info .date{
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.banner-component .info-card .info .time{
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.banner-component .info-card .info p{
+  margin: 0;
+}
+.slider-index{
+  height: 60px;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+.slider-index .index{
+  flex: 1;
+  height: 12px;
+  background-color: #f4f4f4;
+  margin: 10px;
+  border-radius: 3px;
+  transition-duration: .5s;
+}
+.slider-index .index:hover{
+  background-color: #ABFF1D;
+}
+/* .banner-component .space{
+  height: 30px;
+  width: 100%;
+  background-color: #000;
+} */
+.carousel-active{
+  background-color: #ABFF1D !important;
+}
+
+@media(max-width: 950px) {
+  .banner-component {
+    height: 97vw;
+    background-color: #000;
+  }
+  .banner-component .info-card {
+    right: 50vw;
+    transform: translateX(50%) rotate(-5deg);
+    padding: 40px;
+  }
+  .banner-component .slider-outer .slider-container{
+    height: 70vw;
+  }
+}
+
+@media(max-width: 720px) {
+  .banner-component {
+    height: 110vw;
+  }
+  .banner-component .info-card {
+    padding: 20px;
+  }
+  .banner-component .info-card .info .name{
+    font-size: 22px;
+  }
+  .banner-component .info-card .info .date{
+    font-size: 16px;
+  }
+  .banner-component .info-card .info .time{
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 440px) {
+  .banner-component {
+    height: 123vw;
+  }
+  .banner-component .info-card {
+    padding: 20px;
+  }
+  .banner-component .info-card .info {
+    min-width: 330px;
+  }
+  .banner-component .info-card .info .name{
+    font-size: 20px;
+  }
+  .banner-component .info-card .info .date{
+    font-size: 15px;
+  }
+  .banner-component .info-card .info .time{
+    font-size: 15px;
+  }
+}
